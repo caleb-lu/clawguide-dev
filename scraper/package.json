@@ -1,0 +1,20 @@
+{
+  "name": "clawguide-scraper",
+  "version": "1.0.0",
+  "description": "Web scraper for collecting OpenClaw tutorials and skills",
+  "type": "module",
+  "scripts": {
+    "start": "node api/server.js",
+    "scrape": "node scraper/index.js",
+    "scrape:tutorials": "node scraper/collectors/tutorials.js",
+    "scrape:skills": "node scraper/collectors/skills.js",
+    "schedule": "node scraper/scheduler.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "node-cron": "^3.0.3"
+  }
+}

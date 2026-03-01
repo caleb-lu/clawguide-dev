@@ -1,0 +1,82 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import AdBanner from '../components/AdBanner.astro';
+import { ADSENSE_PUBLISHER_ID, ADSENSE_TEST_MODE } from '../config/adsense';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: 'zh' | 'en';
+}
+
+const {
+  title = 'ClawGuide.dev - 真正做事的AI助手',
+  description = '333+ 精选 OpenClaw AI 助手教程。学习部署、skills 和高级技巧。'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const showAds = !ADSENSE_TEST_MODE; // 仅在非测试模式下加载 AdSense
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+
+    <!-- Google AdSense (仅在生产环境加载) -->
+    {showAds && (
+      <script
+        is:inline
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_PUBLISHER_ID}"
+        crossorigin="anonymous"
+      ></script>
+    )}
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <Header />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+
+    <!-- 底部广告位 -->
+    <AdBanner type="footer" />
+
+    <Footer />
+  </body>
+</html>
+
+<script>
+  import Header from '../components/Header.astro';
+  import Footer from '../components/Footer.astro';
+</script>

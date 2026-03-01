@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { tutorials, TutorialCategories } from '../data/tutorials';
+import { SkillCategories } from '../data/skills';
+
+const tutorialCount = tutorials.length;
+const skillCount = SkillCategories.reduce((sum, cat) => sum + cat.count, 0);
+---
+
+<BaseLayout
+  title="关于 - ClawGuide.dev"
+  description="了解 ClawGuide.dev - OpenClaw AI 助手教程和资源的精选导航门户。"
+>
+  <div class="bg-gradient-to-br from-primary-50 to-white py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          关于 ClawGuide.dev
+        </h1>
+        <p class="text-xl text-gray-600">
+          精选门户，助你精通 OpenClaw AI 助手
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-custom py-16">
+    <div class="max-w-4xl mx-auto">
+      <!-- What is OpenClaw -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">什么是 OpenClaw？</h2>
+        <div class="card p-8">
+          <p class="text-lg text-gray-700 mb-4">
+            OpenClaw 是一个<strong>真正做事</strong>的开源 AI 助手平台。与传统聊天机器人不同，OpenClaw 可以：
+          </p>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>通过与你喜欢的工具集成，执行真实任务</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>从用户交互中学习和适应</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>通过 1715+ 社区构建的 skills 扩展功能</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>随处部署 - 云端、本地或边缘设备</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- What is ClawGuide.dev -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">什么是 ClawGuide.dev？</h2>
+        <p class="text-lg text-gray-700 mb-6">
+          ClawGuide.dev 是一个精心策划的导航门户，汇集了来自互联网各地的最佳 OpenClaw 学习资源。我们聚合、整理并呈现来自官方文档、云服务商、视频平台和社区博客的教程。
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card p-6 text-center">
+            <div class="text-4xl font-bold text-primary-600 mb-2">{tutorialCount}+</div>
+            <div class="text-gray-600">精选教程</div>
+          </div>
+          <div class="card p-6 text-center">
+            <div class="text-4xl font-bold text-primary-600 mb-2">{skillCount}+</div>
+            <div class="text-gray-600">可用 Skills</div>
+          </div>
+          <div class="card p-6 text-center">
+            <div class="text-4xl font-bold text-primary-600 mb-2">{SkillCategories.length}</div>
+            <div class="text-gray-600">Skill 分类</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Covered -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">涵盖的资源</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {TutorialCategories.map(cat => (
+            <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+              <span class="text-2xl">{cat.icon}</span>
+              <span class="font-medium text-gray-900">{cat.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Source Platforms -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">来源平台</h2>
+        <p class="text-gray-700 mb-6">
+          我们从 OpenClaw 生态系统中最可信的来源聚合教程：
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">📘</span>
+            <span class="font-medium">官方文档</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">🟠</span>
+            <span class="font-medium">阿里云</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">☁️</span>
+            <span class="font-medium">腾讯云</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">🌊</span>
+            <span class="font-medium">DigitalOcean</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">🎓</span>
+            <span class="font-medium">Codecademy</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">📺</span>
+            <span class="font-medium">Bilibili</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">📝</span>
+            <span class="font-medium">CSDN</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">🎬</span>
+            <span class="font-medium">YouTube</span>
+          </div>
+          <div class="card p-4 flex items-center space-x-3">
+            <span class="text-2xl">💻</span>
+            <span class="font-medium">Dev.to & Medium</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">我们的使命</h2>
+        <div class="card p-8 bg-gradient-to-br from-primary-50 to-blue-50 border-primary-200">
+          <p class="text-lg text-gray-800 mb-4">
+            通过提供集中化、组织良好的学习中心，<strong>降低 OpenClaw 的采用门槛</strong>。
+          </p>
+          <p class="text-lg text-gray-800 mb-4">
+            通过提供中英双语资源，<strong>弥合语言障碍</strong>，使 OpenClaw 面向全球受众。
+          </p>
+          <p class="text-lg text-gray-800">
+            通过持续更新我们的精选列表，<strong>跟上创新步伐</strong>，随着 OpenClaw 的发展和新兴资源的出现。
+          </p>
+        </div>
+      </section>
+
+      <!-- Security Notice -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">⚠️ 安全承诺</h2>
+        <div class="card p-8 border-l-4 border-amber-500 bg-amber-50">
+          <p class="text-gray-800 mb-4">
+            我们认真对待安全问题。ClawGuide.dev 积极跟踪和报告社区仓库中发现的恶意 skills。安装前请始终验证 skills，并遵循我们的安全最佳实践。
+          </p>
+          <a href="/tutorials?category=security" class="text-amber-700 font-medium hover:underline">
+            查看安全资源 →
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">参与进来</h2>
+        <div class="card p-8">
+          <p class="text-gray-700 mb-6">
+            想要贡献教程或建议资源？加入我们的社区！
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://discord.gg/openclaw" target="_blank" rel="noopener noreferrer" class="btn-primary bg-indigo-600 hover:bg-indigo-700">
+              加入 Discord
+            </a>
+            <a href="https://reddit.com/r/openclaw" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              访问 Reddit
+            </a>
+            <a href="https://github.com/openclaw101" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

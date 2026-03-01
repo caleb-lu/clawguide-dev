@@ -1,0 +1,382 @@
+[
+  {
+    "id": "gh-skill-522158088",
+    "name": "chatgpt-on-wechat",
+    "description": "CowAgent是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、拥有长期记忆并不断成长。同时支持飞书、钉钉、企业微信应用、微信公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助手和企业数字员工。",
+    "url": "https://github.com/zhayujie/chatgpt-on-wechat",
+    "category": "automation",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-805155266",
+    "name": "cherry-studio",
+    "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
+    "url": "https://github.com/CherryHQ/cherry-studio",
+    "category": "automation",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1141704318",
+    "name": "awesome-openclaw-skills",
+    "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+    "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+    "category": "tools",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1033778670",
+    "name": "AionUi",
+    "description": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
+    "url": "https://github.com/iOfficeAI/AionUi",
+    "category": "development",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1126947080",
+    "name": "obsidian-skills",
+    "description": "Agent skills for Obsidian. Teach your agent to use Markdown, Bases, JSON Canvas, and use the CLI.",
+    "url": "https://github.com/kepano/obsidian-skills",
+    "category": "data-analysis",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-956472076",
+    "name": "mcp-use",
+    "description": "The fullstack MCP framework to develop MCP Apps for ChatGPT / Claude & MCP Servers for AI Agents.",
+    "url": "https://github.com/mcp-use/mcp-use",
+    "category": "automation",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1014729376",
+    "name": "MemOS",
+    "description": "AI memory OS for LLM and Agent systems(moltbot,clawdbot,openclaw), enabling persistent Skill memory for cross-task skill reuse and evolution.",
+    "url": "https://github.com/MemTensor/MemOS",
+    "category": "productivity",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1128123594",
+    "name": "OpenViking",
+    "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+    "url": "https://github.com/volcengine/OpenViking",
+    "category": "data-analysis",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-542185751",
+    "name": "manifest",
+    "description": "Take Control of Your OpenClaw Costs.",
+    "url": "https://github.com/mnfst/manifest",
+    "category": "tools",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1025906681",
+    "name": "buildwithclaude",
+    "description": "A single hub to find Claude Skills, Agents, Commands, Hooks, Plugins, and Marketplace collections to extend Claude Code, Claude Desktop, Agent SDK and OpenClaw",
+    "url": "https://github.com/davepoon/buildwithclaude",
+    "category": "development",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1138835447",
+    "name": "nano-banana-pro-prompts-recommend-skill",
+    "description": "AI skill for OpenClaw & Claude Code — recommend from 10000+ Nano Banana Pro (Gemini) image prompts. Smart search by use case, content remix, sample images.",
+    "url": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+    "category": "development",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1146153471",
+    "name": "openakita",
+    "description": "An open-source AI assistant framework with skills and agent architecture",
+    "url": "https://github.com/openakita/openakita",
+    "category": "automation",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-784773119",
+    "name": "awesome-openclaw",
+    "description": "A curated list of OpenClaw resources, tools, skills, tutorials & articles. OpenClaw (formerly Moltbot / Clawdbot) — open-source self-hosted AI agent for WhatsApp, Telegram, Discord & 50+ integrations.",
+    "url": "https://github.com/SamurAIGPT/awesome-openclaw",
+    "category": "communication",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1134144797",
+    "name": "skillshare",
+    "description": "📚 Sync skills across all AI CLI tools with one command and simplify team sharing. Supporting Claude Code, OpenClaw, OpenCode & more",
+    "url": "https://github.com/runkids/skillshare",
+    "category": "development",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1150883518",
+    "name": "clawsec",
+    "description": "A complete security skill suite for OpenClaw's and NanoClaw agents (and variants). Protect your SOUL.md (etc') with drift detection, live security recommendations, automated audits, and skill integrity verification. All from one installable suite.",
+    "url": "https://github.com/prompt-security/clawsec",
+    "category": "cloud",
+    "popularity": 99,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1073323930",
+    "name": "ai-maestro",
+    "description": "AI Agent Orchestrator with Skills System - Give AI Agents superpowers: memory search, code graph queries, agent-to-agent messaging. Manage Claude, Codex or any AI Agent from one dashboard. Move Agents between computers and locations",
+    "url": "https://github.com/23blocks-OS/ai-maestro",
+    "category": "development",
+    "popularity": 93,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1143440578",
+    "name": "unbrowse",
+    "description": "Unbrowse — agent native browser skill for any agent. Auto-discovers APIs from browser traffic, generates skills on the fly to call APIs directly 100x faster, 80% cheaper locally.",
+    "url": "https://github.com/unbrowse-ai/unbrowse",
+    "category": "development",
+    "popularity": 90,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1155776927",
+    "name": "pinion-os",
+    "description": "Client SDK, Claude plugin and skill framework for the Pinion protocol. x402 micropayments on Base.",
+    "url": "https://github.com/chu2bard/pinion-os",
+    "category": "tools",
+    "popularity": 86,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1149463075",
+    "name": "openclaw-cloud",
+    "description": "Give your AI Agent a cloud-native life. Deploy once, converse everywhere.",
+    "url": "https://github.com/openperf/openclaw-cloud",
+    "category": "cloud",
+    "popularity": 75,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "gh-skill-1048407687",
+    "name": "human-mcp",
+    "description": "Bringing Human Capabilities to AI Agents",
+    "url": "https://github.com/mrgoonie/human-mcp",
+    "category": "automation",
+    "popularity": 75,
+    "verified": true,
+    "source": "GitHub",
+    "scrapedAt": "2026-02-28T14:47:06.627Z"
+  },
+  {
+    "id": "slack",
+    "name": "Slack Integration",
+    "description": "Send messages to Slack channels",
+    "category": "communication",
+    "popularity": 95,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "discord",
+    "name": "Discord Bot",
+    "description": "Create Discord bots with OpenClaw",
+    "category": "communication",
+    "popularity": 92,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "telegram",
+    "name": "Telegram Bot",
+    "description": "Telegram chatbot integration",
+    "category": "communication",
+    "popularity": 88,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "email",
+    "name": "Email Sender",
+    "description": "Send automated emails",
+    "category": "communication",
+    "popularity": 90,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "github",
+    "name": "GitHub Integration",
+    "description": "Interact with GitHub repositories",
+    "category": "development",
+    "popularity": 94,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab Integration",
+    "description": "GitLab repository management",
+    "category": "development",
+    "popularity": 85,
+    "verified": false,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "jenkins",
+    "name": "Jenkins CI",
+    "description": "Jenkins continuous integration",
+    "category": "devops",
+    "popularity": 82,
+    "verified": false,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "csv",
+    "name": "CSV Processor",
+    "description": "Process CSV files",
+    "category": "data-analysis",
+    "popularity": 88,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "json",
+    "name": "JSON Tools",
+    "description": "Parse and manipulate JSON",
+    "category": "data-analysis",
+    "popularity": 91,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "excel",
+    "name": "Excel Reader",
+    "description": "Read and write Excel files",
+    "category": "data-analysis",
+    "popularity": 87,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "calendar",
+    "name": "Calendar Manager",
+    "description": "Manage calendar events",
+    "category": "productivity",
+    "popularity": 89,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "tasks",
+    "name": "Task Manager",
+    "description": "Create and track tasks",
+    "category": "productivity",
+    "popularity": 93,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "notes",
+    "name": "Note Taker",
+    "description": "Smart note-taking",
+    "category": "productivity",
+    "popularity": 86,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "aws",
+    "name": "AWS S3",
+    "description": "Amazon S3 storage",
+    "category": "cloud",
+    "popularity": 90,
+    "verified": true,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "gcs",
+    "name": "Google Cloud Storage",
+    "description": "GCP storage integration",
+    "category": "cloud",
+    "popularity": 84,
+    "verified": false,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  },
+  {
+    "id": "azure",
+    "name": "Azure Blob",
+    "description": "Microsoft Azure storage",
+    "category": "cloud",
+    "popularity": 82,
+    "verified": false,
+    "source": "Community",
+    "scrapedAt": "2026-02-28T14:47:08.479Z"
+  }
+]

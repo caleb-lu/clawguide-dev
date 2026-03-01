@@ -1,0 +1,289 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getFeaturedTutorials, TutorialCategories } from '../data/tutorials';
+import { SkillCategories } from '../data/skills';
+import AdBanner from '../components/AdBanner.astro';
+
+const featuredTutorials = getFeaturedTutorials();
+const categoryCount = TutorialCategories.length;
+const skillCount = SkillCategories.reduce((sum, cat) => sum + cat.count, 0);
+
+// 结构化数据 for SEO
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ClawGuide.dev",
+  "url": "https://clawguide.dev",
+  "description": "333+ 精选 OpenClaw AI 助手教程和 1715+ skills",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://clawguide.dev/tutorials?search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+---
+
+<BaseLayout>
+  <!-- 结构化数据 -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- 顶部广告位 -->
+  <AdBanner type="banner-top" />
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary-50 via-white to-blue-50 overflow-hidden">
+    <div class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto text-center py-20 md:py-28">
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-medium text-sm mb-6">
+          <span class="animate-pulse mr-2">🚀</span>
+          现已支持 OpenClaw v2026.2.x 系列
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight">
+          真正做事的
+          <span class="bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">AI 助手</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+          ClawGuide.dev 是通往精通 OpenClaw AI 助手的精选门户。
+          访问 <strong class="text-gray-900">333+ 教程</strong>、<strong class="text-gray-900">{skillCount}+ skills</strong> 和全面指南。
+        </p>
+
+        <div id="get-started" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/tutorials" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all">
+            开始学习
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <a href="/skills" class="btn-secondary text-lg px-8 py-4">
+            浏览 Skills
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-3xl mx-auto">
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600">333+</div>
+            <div class="text-gray-600 mt-1">教程</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600">{skillCount}+</div>
+            <div class="text-gray-600 mt-1">Skills</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600">{categoryCount}</div>
+            <div class="text-gray-600 mt-1">分类</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600">9</div>
+            <div class="text-gray-600 mt-1">资源类型</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">为什么选择 ClawGuide.dev？</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          掌握 OpenClaw 所需的一切，均由社区精心策划
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card p-8 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">333+ 精选教程</h3>
+          <p class="text-gray-600">
+            来自官方文档、云服务商和社区专家的精选教程。每周更新。
+          </p>
+        </div>
+
+        <div class="card p-8 text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">双语资源</h3>
+          <p class="text-gray-600">
+            完整的中英文资源覆盖。来自阿里云、腾讯云等平台的内容。
+          </p>
+        </div>
+
+        <div class="card p-8 text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{skillCount}+ Skills</h3>
+          <p class="text-gray-600">
+            探索 31 个分类的 skills。从通信到自动化，找到你所需的一切。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中部广告位 -->
+  <AdBanner type="banner-middle" />
+
+  <!-- Featured Tutorials -->
+  <section class="py-20 bg-gray-50">
+    <div class="container-custom">
+      <div class="flex justify-between items-center mb-12">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">精选教程</h2>
+          <p class="text-gray-600">从最受欢迎的指南开始</p>
+        </div>
+        <a href="/tutorials" class="hidden md:flex items-center text-primary-600 hover:text-primary-700 font-medium">
+          查看所有教程
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featuredTutorials.slice(0, 6).map((tutorial) => (
+          <a href={tutorial.url} target="_blank" rel="noopener noreferrer" class="card p-6 block hover:border-primary-300 transition-colors">
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-700">
+                {TutorialCategories.find(c => c.id === tutorial.category)?.name}
+              </span>
+              <span class="text-xs text-gray-500">{tutorial.language}</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">{tutorial.title}</h3>
+            <p class="text-gray-600 text-sm line-clamp-2 mb-4">{tutorial.description}</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">{tutorial.source}</span>
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-8 text-center md:hidden">
+        <a href="/tutorials" class="btn-primary">
+          查看所有教程
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill Categories -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">探索 Skills</h2>
+        <p class="text-gray-600">31 个分类，{skillCount}+ skills 等你发现</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {SkillCategories.slice(0, 18).map((category) => (
+          <a href={`/skills?category=${category.id}`} class="card p-4 text-center hover:scale-105 transition-transform">
+            <div class="text-3xl mb-2">{category.icon}</div>
+            <div class="font-medium text-gray-900 text-sm mb-1">{category.name}</div>
+            <div class="text-xs text-gray-500">{category.count} skills</div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/skills" class="btn-secondary">
+          浏览全部 {categoryCount} 个分类
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutorial Categories -->
+  <section class="py-20 bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">按分类浏览</h2>
+        <p class="text-gray-600">找到符合你学习目标的教程</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {TutorialCategories.map((category) => (
+          <a href={`/tutorials?category=${category.id}`} class="card p-6 flex items-center space-x-4 hover:border-primary-300 transition-colors">
+            <div class="text-4xl">{category.icon}</div>
+            <div>
+              <h3 class="font-bold text-gray-900">{category.name}</h3>
+              <p class="text-sm text-gray-500">点击探索</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Notice -->
+  <section class="py-12 bg-gradient-to-r from-amber-50 to-orange-50 border-y border-amber-200">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-4xl">⚠️</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-amber-900 mb-2">安全公告：发现恶意 Skills</h3>
+            <p class="text-amber-800 mb-3">
+              我们在部分社区仓库中发现了恶意 skills。安装前请务必验证。
+            </p>
+            <a href="/tutorials?category=security" class="text-amber-900 font-medium hover:underline">
+              了解安全最佳实践 →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-primary-600 to-blue-700 text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">准备好构建令人惊叹的项目了吗？</h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        加入数千名开发者，使用 OpenClaw 构建强大的 AI 助手。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/tutorials?category=getting-started" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+          从快速入门开始
+        </a>
+        <a href="https://discord.gg/openclaw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+          加入 Discord 社区
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .bg-grid-slate-100 {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  }
+</style>

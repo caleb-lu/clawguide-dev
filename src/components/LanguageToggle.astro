@@ -1,0 +1,41 @@
+---
+const currentPath = Astro.url.pathname;
+const currentUrl = new URL(Astro.url);
+
+// Available languages
+const languages = [
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'en', name: 'EN', flag: '🇺🇸' },
+];
+
+// Get current language from query param or default to zh
+const currentLang = currentUrl.searchParams.get('lang') || 'zh';
+---
+
+<div class="relative group" id="language-toggle">
+  <button class="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors">
+    <span class="text-lg">{languages.find(l => l.code === currentLang)?.flag || '🌐'}</span>
+    <span class="text-sm font-medium">{languages.find(l => l.code === currentLang)?.name || '语言'}</span>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+
+  <div class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+    {languages.map(lang => (
+      <a
+        href={`${currentPath}?lang=${lang.code}`}
+        class:font-bold={lang.code === currentLang}
+        class="flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg transition-colors"
+      >
+        <span class="text-xl">{lang.flag}</span>
+        <span class="text-gray-900">{lang.name}</span>
+        {lang.code === currentLang && (
+          <svg class="w-4 h-4 text-primary-600 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+        )}
+      </a>
+    ))}
+  </div>
+</div>

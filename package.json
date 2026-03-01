@@ -1,0 +1,30 @@
+{
+  "name": "clawguide-dev",
+  "version": "1.0.0",
+  "description": "ClawGuide.dev - OpenClaw AI Assistant Tutorial Portal",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "node tests/automation-test.js",
+    "test:e2e": "node tests/e2e-test.js",
+    "scrape": "cd scraper && node index.js",
+    "scrape:tutorials": "cd scraper && node collectors/tutorials.js",
+    "scrape:skills": "cd scraper && node collectors/skills.js",
+    "api": "cd scraper && npm start",
+    "schedule": "cd scraper && npm run schedule"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.12",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
