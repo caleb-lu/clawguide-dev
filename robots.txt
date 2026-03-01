@@ -1,0 +1,14 @@
+# ClawGuide.dev robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow API routes
+Disallow: /api/
+Disallow: /_astro/
+
+# Sitemap location
+Sitemap: https://clawguide.dev/sitemap-index.xml
+
+# Crawl-delay (optional, polite crawling)
+Crawl-delay: 1
