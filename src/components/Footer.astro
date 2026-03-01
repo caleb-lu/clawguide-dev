@@ -1,4 +1,6 @@
 ---
+import { getAbsoluteAssetPath } from 'astro:assets';
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -30,9 +32,9 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="font-semibold text-white mb-4">资源</h3>
         <ul class="space-y-2">
-          <li><a href="/tutorials" class="hover:text-primary-400 transition-colors">教程</a></li>
-          <li><a href="/skills" class="hover:text-primary-400 transition-colors">Skills 目录</a></li>
-          <li><a href="/about" class="hover:text-primary-400 transition-colors">关于 OpenClaw</a></li>
+          <li><a href={getAbsoluteAssetPath('/tutorials')} class="hover:text-primary-400 transition-colors">教程</a></li>
+          <li><a href={getAbsoluteAssetPath('/skills')} class="hover:text-primary-400 transition-colors">Skills 目录</a></li>
+          <li><a href={getAbsoluteAssetPath('/about')} class="hover:text-primary-400 transition-colors">关于 OpenClaw</a></li>
         </ul>
       </div>
 
@@ -40,10 +42,10 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="font-semibold text-white mb-4">分类</h3>
         <ul class="space-y-2">
-          <li><a href="/tutorials?category=getting-started" class="hover:text-primary-400 transition-colors">快速入门</a></li>
-          <li><a href="/tutorials?category=deployment" class="hover:text-primary-400 transition-colors">云部署</a></li>
-          <li><a href="/tutorials?category=official" class="hover:text-primary-400 transition-colors">官方文档</a></li>
-          <li><a href="/tutorials?category=videos" class="hover:text-primary-400 transition-colors">视频教程</a></li>
+          <li><a href={getAbsoluteAssetPath('/tutorials?category=getting-started')} class="hover:text-primary-400 transition-colors">快速入门</a></li>
+          <li><a href={getAbsoluteAssetPath('/tutorials?category=deployment')} class="hover:text-primary-400 transition-colors">云部署</a></li>
+          <li><a href={getAbsoluteAssetPath('/tutorials?category=official')} class="hover:text-primary-400 transition-colors">官方文档</a></li>
+          <li><a href={getAbsoluteAssetPath('/tutorials?category=videos')} class="hover:text-primary-400 transition-colors">视频教程</a></li>
         </ul>
       </div>
     </div>

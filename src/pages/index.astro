@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getFeaturedTutorials, TutorialCategories } from '../data/tutorials';
 import { SkillCategories } from '../data/skills';
 import AdBanner from '../components/AdBanner.astro';
+import { getAbsoluteAssetPath } from 'astro:assets';
 
 const featuredTutorials = getFeaturedTutorials();
 const categoryCount = TutorialCategories.length;
@@ -52,13 +53,13 @@ const schema = {
         </p>
 
         <div id="get-started" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="/tutorials" class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all">
+          <a href={getAbsoluteAssetPath("/tutorials")} class="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all">
             开始学习
             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
             </svg>
           </a>
-          <a href="/skills" class="btn-secondary text-lg px-8 py-4">
+          <a href={getAbsoluteAssetPath("/skills")} class="btn-secondary text-lg px-8 py-4">
             浏览 Skills
           </a>
         </div>
@@ -147,7 +148,7 @@ const schema = {
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">精选教程</h2>
           <p class="text-gray-600">从最受欢迎的指南开始</p>
         </div>
-        <a href="/tutorials" class="hidden md:flex items-center text-primary-600 hover:text-primary-700 font-medium">
+        <a href={getAbsoluteAssetPath("/tutorials")} class="hidden md:flex items-center text-primary-600 hover:text-primary-700 font-medium">
           查看所有教程
           <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -177,7 +178,7 @@ const schema = {
       </div>
 
       <div class="mt-8 text-center md:hidden">
-        <a href="/tutorials" class="btn-primary">
+        <a href={getAbsoluteAssetPath("/tutorials")} class="btn-primary">
           查看所有教程
         </a>
       </div>
@@ -203,7 +204,7 @@ const schema = {
       </div>
 
       <div class="mt-8 text-center">
-        <a href="/skills" class="btn-secondary">
+        <a href={getAbsoluteAssetPath("/skills")} class="btn-secondary">
           浏览全部 {categoryCount} 个分类
         </a>
       </div>
